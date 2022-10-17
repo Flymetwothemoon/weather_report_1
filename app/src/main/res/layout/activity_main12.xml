@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/xw_1"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/city"
+                        android:maxLines="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="1dp"
+                        android:text="ssfs "
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/n_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/city"
+                        android:layout_centerInParent="true"
+
+                        android:layout_marginTop="10dp"
+                        android:text="fssasda"
+                        android:textColor="@color/white"
+                        android:textSize="90dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/city" />
+
+                    <TextView
+                        android:id="@+id/h_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/n_temp"
+
+                        android:layout_marginTop="20dp"
+                        android:text="gdgd "
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toStartOf="@+id/c_temp"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/n_temp" />
+
+                    <TextView
+                        android:id="@+id/c_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/n_temp"
+
+                        android:text="gdgd"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/h_temp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/h_temp"
+                        app:layout_constraintTop_toTopOf="@+id/h_temp"
+                        app:layout_constraintVertical_bias="0.5" />
+
+                    <TextView
+                        android:id="@+id/now_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/h_temp"
+                        android:layout_marginTop="10dp"
+                        android:text="fwda"
+                        android:textColor="@color/white"
+                        android:textSize="35dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/h_temp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycle_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/now_weather"
+                        android:layout_marginTop="50dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/now_weather" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycle_0"
+                        android:layout_width="409dp"
+                        android:layout_height="333dp"
+                        android:layout_below="@id/recycle_1"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="50dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/recycle_1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+<RelativeLayout
+android:background="@mipmap/xw_3"
+android:layout_gravity="start"
+android:layout_height="match_parent"
+android:layout_width="match_parent">
+
+<EditText
+    android:gravity="top"
+    android:hint="请输入城市"
+    android:id="@+id/edit_text"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content" />
+
+<Button
+    android:id="@+id/button_findcity"
+    android:layout_below="@+id/edit_text"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:text="Recommended City"
+    android:textColor="@color/white" />
+
+<Button
+    android:id="@+id/button_seekcity"
+    android:layout_below="@+id/button_findcity"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:text="Seek City"
+    android:textColor="@color/white" />
+
+<Button
+    android:background="@android:color/transparent"
+    android:id="@+id/button"
+    android:layout_alignParentBottom="true"
+    android:layout_centerInParent="true"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:text="关注向晚大魔王"
+    android:textColor="@color/white"
+    android:textSize="20dp" />
+</RelativeLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+

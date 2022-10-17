@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bz_4"
+    tools:context=".MainActivity2">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="推荐城市"
+        android:id="@+id/in_text_1"
+        android:paddingTop="60dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/in_text_2"
+        android:layout_below="@id/in_text_1"
+        android:text="-----------------------------------------------------------------------------------------------"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+       android:layout_below="@+id/in_text_2"
+       android:layout_width="match_parent"
+        android:id="@+id/import_recycle"
+       android:layout_height="match_parent"/>
+
+
+</RelativeLayout>
